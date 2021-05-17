@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#set -e
+set -x
 
 #functions
 function ExtractVariable()
@@ -37,6 +37,7 @@ cd setup-minikube-action
 SKIP_TEST=true SKIP_FORMAT=true SKIP_LINT=true npm install
 env 'INPUT_MINIKUBE-VERSION='$MINIKUBE_VERSION node lib/index.js
 cd ..
+rm -rf setup-minikube-action
 
 # Deploy Eclipse Che
 echo "Deploy Eclipse Che..."
@@ -46,6 +47,7 @@ cd che-deploy-action
 SKIP_TEST=true SKIP_FORMAT=true SKIP_LINT=true npm install
 env 'INPUT_CHECTL-CHANNEL='$CHECTL_CHANNEL node lib/index.js
 cd ..
+rm -rf che-deploy-action
 
 #devfile-che-theia
 echo "devfile-che-theia"
