@@ -2,7 +2,7 @@
 
 dist: focal
 os: linux
-cache: false
+cache: yarn
 git:
   depth: false 
 
@@ -30,9 +30,6 @@ jobs:
     - &happy-path
       name: happy-path (alpine, next)
       install: skip
-      cache: 
-        npm: true
-        yarn: true
       env: DIST=alpine CHECTL_CHANNEL=next MINIKUBE_VERSION=v1.18.1
       arch: amd64
       script: ./.travis/happy-path.sh
