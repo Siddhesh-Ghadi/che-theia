@@ -6,7 +6,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "version": "0.0.1",
+  "version": "7.38.1",
   "files": [
     "lib",
     "src"
@@ -14,7 +14,7 @@
   "dependencies": {
     "@eclipse-che/api": "latest",
     "@kubernetes/client-node": "^0.12.1",
-    "@eclipse-che/theia-remote-api": "^0.0.1",
+    "@eclipse-che/theia-remote-api": "7.38.1",
     "@eclipse-che/workspace-client": "latest"
   },
   "scripts": {
